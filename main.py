@@ -1,13 +1,130 @@
 import sys
 import sqlite3
-from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidgetItem, QHeaderView
+from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class MyWidget(QMainWindow):
+class Ui_MainWindow2(object):
+    def setupUi2(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(440, 391)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(50, 20, 160, 201))
+        self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.label_2 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_2.setObjectName("label_2")
+        self.verticalLayout.addWidget(self.label_2)
+        self.label_3 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_3.setObjectName("label_3")
+        self.verticalLayout.addWidget(self.label_3)
+        self.label_4 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_4.setObjectName("label_4")
+        self.verticalLayout.addWidget(self.label_4)
+        self.label_5 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_5.setObjectName("label_5")
+        self.verticalLayout.addWidget(self.label_5)
+        self.label_6 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_6.setObjectName("label_6")
+        self.verticalLayout.addWidget(self.label_6)
+        self.label_7 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        self.label_7.setObjectName("label_7")
+        self.verticalLayout.addWidget(self.label_7)
+        self.verticalLayoutWidget_2 = QtWidgets.QWidget(self.centralwidget)
+        self.verticalLayoutWidget_2.setGeometry(QtCore.QRect(230, 20, 160, 201))
+        self.verticalLayoutWidget_2.setObjectName("verticalLayoutWidget_2")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_2)
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        self.name = QtWidgets.QLineEdit(self.verticalLayoutWidget_2)
+        self.name.setObjectName("name")
+        self.verticalLayout_2.addWidget(self.name)
+        self.degree = QtWidgets.QLineEdit(self.verticalLayoutWidget_2)
+        self.degree.setObjectName("degree")
+        self.verticalLayout_2.addWidget(self.degree)
+        self.type = QtWidgets.QLineEdit(self.verticalLayoutWidget_2)
+        self.type.setObjectName("type")
+        self.verticalLayout_2.addWidget(self.type)
+        self.taste = QtWidgets.QLineEdit(self.verticalLayoutWidget_2)
+        self.taste.setObjectName("taste")
+        self.verticalLayout_2.addWidget(self.taste)
+        self.cost = QtWidgets.QLineEdit(self.verticalLayoutWidget_2)
+        self.cost.setObjectName("cost")
+        self.verticalLayout_2.addWidget(self.cost)
+        self.amount = QtWidgets.QLineEdit(self.verticalLayoutWidget_2)
+        self.amount.setObjectName("amount")
+        self.verticalLayout_2.addWidget(self.amount)
+        self.btn_add = QtWidgets.QPushButton(self.centralwidget)
+        self.btn_add.setGeometry(QtCore.QRect(110, 240, 93, 28))
+        self.btn_add.setObjectName("btn_add")
+        self.btn_edit = QtWidgets.QPushButton(self.centralwidget)
+        self.btn_edit.setGeometry(QtCore.QRect(220, 240, 131, 28))
+        self.btn_edit.setObjectName("btn_edit")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 440, 26))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.label_2.setText(_translate("MainWindow", "название"))
+        self.label_3.setText(_translate("MainWindow", "степень прожарки"))
+        self.label_4.setText(_translate("MainWindow", "молотый/в зернах"))
+        self.label_5.setText(_translate("MainWindow", "описание вкуса"))
+        self.label_6.setText(_translate("MainWindow", "цена"))
+        self.label_7.setText(_translate("MainWindow", "объем упаковки"))
+        self.btn_add.setText(_translate("MainWindow", "Добавить"))
+        self.btn_edit.setText(_translate("MainWindow", "Редактировать"))
+
+
+class Ui_MainWindow1(object):
+    def setupUi1(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(972, 642)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.table = QtWidgets.QTableWidget(self.centralwidget)
+        self.table.setGeometry(QtCore.QRect(20, 20, 931, 521))
+        self.table.setObjectName("table")
+        self.table.setColumnCount(0)
+        self.table.setRowCount(0)
+        self.btn = QtWidgets.QPushButton(self.centralwidget)
+        self.btn.setGeometry(QtCore.QRect(860, 550, 93, 28))
+        self.btn.setObjectName("btn")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 972, 26))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.btn.setText(_translate("MainWindow", "Обновить"))
+
+
+class MyWidget(QMainWindow, Ui_MainWindow1):
     def __init__(self):
         super().__init__()
-        uic.loadUi('main.ui', self)
+        self.setupUi1(self)
         self.initUI()
 
     def initUI(self):
@@ -39,10 +156,10 @@ class MyWidget(QMainWindow):
         self.change()
 
 
-class SecondWidget(QMainWindow):
+class SecondWidget(QMainWindow, Ui_MainWindow2):
     def __init__(self):
         super().__init__()
-        uic.loadUi('addEditCoffeeForm.ui', self)
+        self.setupUi2(self)
         self.initUI()
 
     def initUI(self):
